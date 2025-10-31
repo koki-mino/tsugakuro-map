@@ -97,22 +97,6 @@ function initUI(){
   document.getElementById("locate").addEventListener("click", locateMe);
 }
 
-function loadCSV(url){
-  Papa.parse(url, {
-    download: true,
-    header: true,
-    skipEmptyLines: true,
-    complete: (results) => {
-      allPoints = (results.data || []).map(cleanRow).filter(Boolean);
-      renderMarkers(allPoints);
-      applyFilters();
-    },
-    error: (err) => {
-      console.error("CSV load error", err);
-      alert("データ（CSV）の読み込みに失敗しました。data/hazards.csv を確認してください。");
-    }
-  });
-}
 
 function cleanRow(row){
   // 必須: lat, lng, category
