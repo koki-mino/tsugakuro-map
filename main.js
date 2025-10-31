@@ -3,7 +3,7 @@
 // ---- Config ----
 const DEFAULT_CENTER = [36.3407, 139.4495]; // 足利市役所 付近（おおよそ）
 const DEFAULT_ZOOM = 13;
-const SHEET_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRK4pMI_88CCKoBoQyyWAeQSlGjbTibkv3jhD-vHPsZQSqyUVem-7DILlfRs_1L3yB5uw0qBZjYg5E_/pub?gid=788512469&single=true&output=csv;
+const SHEET_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRK4pMI_88CCKoBoQyyWAeQSlGjbTibkv3jhD-vHPsZQSqyUVem-7DILlfRs_1L3yB5uw0qBZjYg5E_/pub?gid=788512469&single=true&output=csv";
 const DATA_CSV  = new URLSearchParams(location.search).get("csv") || SHEET_CSV;
 
 function loadCSV(url){
